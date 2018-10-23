@@ -84,16 +84,27 @@ dado *returnData(list *l, int i){
     return NULL;
 }
 
-int compareData(int a, int b){
-
-}
-
-dado *removeData(lista *l, int key){
-    if(l!=NULL}{
-
-
+list *concatList(list *a, list *b){
+    if(a!=NULL && b!=NULL){
+        if(a->qtd>0 && b->qtd>0){
+            list *c;
+            int log;
+            c=createList();
+            node *aux;
+            aux=a->head;
+            while(aux!=NULL){
+                log=addDataFirstP(c,aux->dados);
+                aux=aux->next;
+            }
+            aux=b->head;
+            while(aux!=NULL){
+                log=addDataFirstP(c,aux->dados);
+                aux=aux->next;
+            }
+            return c;
+        }
     }
-
+    return NULL;
 }
 
 int main(){
